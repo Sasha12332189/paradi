@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goût de Luxe - Вкус роскоши</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6b5f56;
+        }
+        header {
+            background: url('images/rest.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            z-index: 1;
+            position: relative;
+        }
+       header p {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            z-index: 1;
+            position: relative;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 10px 5%; /* Уменьшаем отступы сверху и снизу до 10px, по бокам оставляем 5% */
+            max-width: 85%;
+            margin: 20px auto;
+            background-color: #fcf2e8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 20px; /* Скругление углов */
+            transition: all 0.3s ease; /* Плавный переход */
+            line-height: 1.6; /* Межстрочный интервал для читаемости */
+        }
+
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        section p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+                /* Общий стиль для секции */
+        #seasonal-dishes {
+  /* Контейнер для карточек */
+        .seasonal-dishes-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+
+        /* Карточки блюд */
+        .dish-card {
+            flex: 1 1 calc(33.33% - 20px); /* Карточка занимает треть ширины контейнера */
+            max-width: calc(33.33% - 20px);
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Изображения */
+        .dish-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .seasonal-dishes-container {
+                flex-wrap: wrap; /* Карточки переходят в столбцы */
+                justify-content: center;
+            }
+            .dish-card {
+                flex: 1 1 45%;
+                max-width: 45%;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dish-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+    </style>
+    <script>
+        window.history.replaceState(null, null, window.location.pathname);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Goût de Luxe</h1>
+        <p>Изысканный вкус, воплощённый в совершенстве</p>
+    </header>
+
+    <nav>
+        <a href="#about">О ресторане</a>
+        <a href="menu.html">Меню</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section id="about" data-aos="fade-up">
+        <h2>О ресторане</h2>
+        <p>
+            Добро пожаловать в "Goût de Luxe" — место, где гастрономические традиции Франции
+            встречаются с современными кулинарными трендами. Мы предлагаем блюда, которые
+            создаются с душой и вдохновением, чтобы каждый визит стал для вас незабываемым.
+        </p>
+        <p>
+            Откройте для себя наш утончённый интерьер, безупречный сервис и коллекцию лучших
+            вин, собранных со всего мира.
+        </p>
+    </section>
+
+   <section id="seasonal-dishes" data-aos="fade-up">
+        <h2>Блюда сезона</h2>
+        <div class="seasonal-dishes-container">
+            <!-- Блюдо 1 -->
+            <div class="dish-card">
+                <img src="images/sypbisk.jpg" alt="Суп-биск из лобстера" class="dish-image">
+                <h3>Суп-биск из лобстера</h3>
+                <p>Согревающий суп с насыщенным вкусом морепродуктов и эстрагона.</p>
+                <p><strong>Цена:</strong> 850 грн.</p>
+            </div>
+            <!-- Блюдо 2 -->
+            <div class="dish-card">
+                <img src="images/ytka.jpg" alt="Конфи из утки" class="dish-image">
+                <h3>Конфи из утки</h3>
+                <p>Хрустящая утка с малиновым соусом и запечёнными овощами.</p>
+                <p><strong>Цена:</strong> 1,200 грн.</p>
+            </div>
+            <!-- Блюдо 3 -->
+            <div class="dish-card">
+                <img src="images/syfle2.jpg" alt="Суфле из черного шоколада" class="dish-image">
+                <h3>Суфле из черного шоколада</h3>
+                <p>Нежное шоколадное суфле с ликером Гран-Марнье.</p>
+                <p><strong>Цена:</strong> 600 грн.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Контакты</h2>
+        <p>Адрес: Ул. Гурмана, 7, Киев, Украина</p>
+        <p>Телефон: +38 (044) 123-4567</p>
+        <p>Электронная почта: contact@goutdeluxe.com</p>
+        <p>Мы открыты: с 12:00 до 23:00 ежедневно</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Goût de Luxe. Все права защищены.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

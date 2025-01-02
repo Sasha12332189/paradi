@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Goût de Luxe</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6b5f56;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('images/rest.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+         header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+             z-index: 1;
+            position: relative;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .dish {
+            background-color: #fcf2e6; /* Светлый фон */
+            color: #333; /* Тёмный текст */
+            border: 2px solid #ccc; /* Тонкая рамка */
+            border-radius: 30px; /* Скруглённые углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+            padding: 15px; /* Внутренние отступы */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+            text-align: center; /* Центрирование содержимого */
+            overflow: hidden; /* Обрезка содержимого */
+            margin-bottom: 20px; /* Увеличенный нижний отступ между карточками */
+            margin-right: 20px; /* Отступы по горизонтали (если не используете grid) */
+        }
+
+        .dish:hover {
+            transform: translateY(-5px); /* Подъём карточки при наведении */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Увеличение тени */
+        }
+
+        .dish h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #444; /* Темно-серый цвет заголовка */
+        }
+
+        .dish p {
+            margin: 5px 0;
+            font-size: 16px; /* Увеличение шрифта */
+            color: #666; /* Средне-серый текст */
+        }
+
+        .dish-image {
+            width: 100%; /* Используем всю ширину карточки */
+            height: auto; /* Сохраняем пропорции */
+            border-radius: 8px; /* Скруглённые углы изображения */
+            margin-bottom: 10px; /* Отступ от изображения */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    <script>
+        window.history.replaceState(null, null, window.location.pathname);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Меню</h1>
+    </header>
+
+    <nav>
+        <a href="#entrees">Закуски</a>
+        <a href="#main-courses">Основные блюда</a>
+        <a href="#cheeses">Сыры</a>
+        <a href="index.html">Главная страница</a>
+        <a href="#desserts">Десерты</a>
+        <a href="#drinks">Напитки</a>
+        <a href="#tasting-menu">Дегустационный сет</a>
+    </nav>
+
+    <main>
+        <section id="entrees">
+            <h2>Entrées (Закуски)</h2>
+            <div class="dish">
+                <h3>Фуа-гра с карамелизированными яблоками и соусом из хереса. <strong>Цена:</strong> 950грн.</h3>
+                <img src="images/fuagra.jpg" alt="Фуа-гра с карамелизированными яблоками и соусом из хереса" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Тартар из лосося с авокадо и лаймом. <strong>Цена:</strong> 750 грн.</h3>
+                 <img src="images/tartar.jpg" alt="Тартар из лосося с авокадо и лаймом" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Суп-биск из лобстера с эстрагоном. <strong>Цена:</strong> 850 грн.</h3>
+                <img src="images/sypbisk.jpg" alt="Суп-биск из лобстера" class="dish-image">
+            </div>
+        </section>
+
+        <section id="main-courses">
+            <h2>Plats principaux (Основные блюда)</h2>
+            <div class="dish">
+                <h3>Филе миньон с трюфельным соусом и картофельным гратеном. <strong>Цена:</strong> 1,600 грн.</h3>
+                <img src="images/file.jpg" alt="Филе миньон с трюфельным соусом и картофельным гратеном" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Конфи из утки с малиновым соусом и печеными овощами. ><strong>Цена:</strong> 1,200 грн.</h3>
+                <img src="images/ytka.jpg" alt="Конфи из утки с малиновым соусом и печеными овощами" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Турбо с соусом из шампанского и нежным пюре из сельдерея. <strong>Цена:</strong> 1,400 грн.</h3>
+                <img src="images/selderei.jpg" alt="Турбо с соусом из шампанского и нежным пюре из сельдерея" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Равиоли с кроликом и грибным кремом. <strong>Цена:</strong> 950 грн.</h3>
+                 <img src="images/ravioli.jpg" alt="Равиоли с кроликом и грибным кремом" class="dish-image">
+            </div>
+        </section>
+
+        <section id="cheeses">
+            <h2>Fromages (Сыры)</h2>
+            <div class="dish">
+                <h3>Ассорти французских сыров. <strong>Цена:</strong> 800 грн.</h3>
+                <img src="images/asorti.jpg" alt="Фссорти французских сыров" class="dish-image">
+            </div>
+        </section>
+
+        <section id="desserts">
+            <h2>Desserts (Десерты)</h2>
+            <div class="dish">
+                <h3>Крем-брюле с ванилью из Мадагаскара. <strong>Цена:</strong> 450 грн.</h3>
+                <img src="images/crem.jpg" alt="Крем бюре с ванилью из Мадагаскара" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Тарт татен с карамельным соусом и ванильным мороженым. <strong>Цена:</strong> 550 грн.</h3>
+                <img src="images/tarte.jpg" alt="Тарт татен с карамельным соусом и ванильным мороженым" class="dish-image">
+            </div>
+            <div class="dish">
+                <h3>Суфле из черного шоколада с ликером Гран-Марнье. <strong>Цена:</strong> 600 грн.</h3>
+                 <img src="images/syfle2.jpg" alt="Суфле из черного шоколада с ликером Гран-Марнье" class="dish-image">
+            </div>
+        </section>
+
+        <section id="drinks">
+            <h2>Boissons (Напитки)</h2>
+            <p><strong>Вино:</strong> Бокал: от 250 до 500 грн. Бутылка: от 1,500 до 6,000 грн.</p>
+            <p><strong>Шампанское:</strong> Бокал: от 400 грн. Бутылка: от 2,500 до 15,000 грн.</p>
+            <p><strong>Дижестивы:</strong> Коньяк, кальвадос, арманьяк: от 300 грн за порцию (50 мл).</p>
+            <p><strong>Коктейли:</strong> Kir Royal: 450 грн. French 75: 500 грн.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Goût de Luxe. Все права защищены.</p>
+    </footer>
+        <button id="scrollTop" style="display: none; position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">Наверх ↑</button>
+    <script>
+        const scrollTopButton = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
+        });
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
